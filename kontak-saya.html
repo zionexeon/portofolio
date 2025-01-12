@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-slate-50 shadow-lg max-w-full">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img class="h-16 lg:h-20 p-3 w-auto" src="YOUR_LOGO_URL" alt="YOUR_LOGO_ALT_TEXT" />
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-5 flex items-baseline space-x-4" id="nav-links">
+                        <a href="index.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Beranda</a>
+                        <a href="tentang-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Tentang Saya</a>
+                        <a href="produk-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Hasil Kerja</a>
+                        <a href="kontak-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Kontak</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" type="button" class="bg-[#614a93] inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-[#3a2c58] focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="menu-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden" id="mobile-menu" style="display: none">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Beranda</a>
+                <a href="tentang-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Tentang Saya</a>
+                <a href="produk-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Hasil Kerja</a>
+                <a href="kontak-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container md:mx-auto md:py-4 py-2 px-4 mb-4">
+        <p class="text-3xl mb-4 font-bold text-center" data-aos="fade-down" data-aos-duration="1000">Kontak Saya</p>
+        <div class="mx-4 md:mx-0 mb-4">
+            <div class="rounded-lg" id="semua" role="tabpanel" aria-labelledby="semua-tab" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                <div class="flex items-center justify-center gap-4 mb-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Email Card -->
+                        <div class="p-6 max-w-sm bg-slate-50 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-slate-300">
+                            <span class="mb-2 flex justify-center items-center font-bold tracking-tight text-gray-900">
+                                <img class="w-40 h-40 object-contain" src="YOUR_EMAIL_ICON_URL" alt="Gmail" />
+                            </span>
+                            <h5 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900">Email</h5>
+                            <div class="flex justify-center items-center">
+                                <a href="mailto:YOUR_EMAIL" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-[#614a93] rounded-lg hover:bg-[#3a2c58] focus:ring-4 focus:outline-none focus:ring-blue-300" target="_blank">
+                                    Kirim Pesan
+                                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- WhatsApp Card -->
+                        <div class="p-6 max-w-sm bg-slate-50 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:bg-slate-300">
+                            <span class="flex justify-center items-center font-bold tracking-tight text-gray-900 mb-3">
+                                <img class="w-40 h-40 object-contain" src="YOUR_WHATSAPP_ICON_URL" alt="Whatsapp" />
+                            </span>
+                            <h5 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900">Telepon / Whatsapp</h5>
+                            <div class="flex justify-center items-center">
+                                <a href="https://wa.me/YOUR_PHONE_NUMBER" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-[#614a93] rounded-lg hover:bg-[#3a2c58] focus:ring-4 focus:outline-none focus:ring-blue-300" target="_blank">
+                                    Chat
+                                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-3xl mb-4 font-bold text-center">Media Sosial Kami</p>
+                <div class="flex flex-row justify-center items-center mb-4">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-16 md:mx-0" id="social-media-grid" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+                        <!-- Social Media Icons -->
+                        <!-- Example: -->
+                        <div>
+                            <a href="YOUR_SOCIAL_MEDIA_LINK" target="_blank">
+                                <img src="YOUR_SOCIAL_MEDIA_ICON_URL" alt="Social Media" class="w-16 h-16 object-contain" />
+                            </a>
+                        </div>
+                        <!-- Repeat for more social media icons -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-gray-200 font-poppins">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between md:items-center md:mx-14">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="flex items-center justify-center md:justify-normal">
+                        <img src="YOUR_FOOTER_LOGO_URL" class="h-32 sm:h-52 w-auto mr-3" alt="YOUR_FOOTER_LOGO_ALT_TEXT" />
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 gap-4 font-poppins">
+                    <div>
+                        <h2 class="mb-5 text-sm font-bold text-[#5c3d1d] uppercase">Lainnya</h2>
+                        <ul class="text-[#5c3d1d] font-bold">
+                            <li>
+                                <a href="kontak-saya.html" class="hover:underline">Hubungi Saya</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-[#3d2829] sm:mx-auto lg:my-8" />
+            <div class="flex items-center justify-center">
+                <span class="text-1xl text-center text-[#5c3d1d] font-bold">
+                    © 2025 <a href="index.html" class="hover:underline">YOUR_SITE_NAME</a>. Dibuat dengan sepenuh &#10084;.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/sosialmedia.js"></script>
+</body>
+</html>

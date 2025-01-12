@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio | Your Name</title>
+    
+    <!-- Include Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Include Flowbite CSS for additional UI components -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Include GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav class="bg-slate-50 shadow-lg max-w-full">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <!-- Logo Link -->
+                    <a href="index.html">
+                        <img class="h-16 lg:h-20 p-3 w-auto" src="https://res.cloudinary.com/dnmkw2715/image/upload/v1691221758/zionexeonch/Logo_GraphixTech_6_ktomnk.png" alt="Your Logo" />
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-5 flex items-baseline space-x-4" id="nav-links">
+                        <!-- Navigation Links -->
+                        <a href="index.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold" aria-current="page">Beranda</a>
+                        <a href="tentang-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Tentang Saya</a>
+                        <a href="produk-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Hasil Kerja</a>
+                        <a href="kontak-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Kontak</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-toggle" type="button" class="bg-[#614a93] inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-[#3a2c58] focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="menu-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden" id="mobile-menu" style="display: none">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <!-- Mobile Navigation Links -->
+                <a href="index.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold" aria-current="page">Beranda</a>
+                <a href="tentang-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Tentang Saya</a>
+                <a href="produk-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Hasil Kerja</a>
+                <a href="kontak-saya.html" class="text-[#5c3d1d] hover:text-white hover:bg-[#3a2c58] block py-2 px-5 font-bold">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto my-4">
+        <!-- Main Section -->
+        <section class="mx-auto mt-4 mb-4">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center px-4 lg:w-1/2">
+                    <!-- Main Title -->
+                    <h1 class="text-base font-semibold text-primary md:text-xl">
+                        Halo Semua 👋, saya
+                        <span class="mt-1 mb-4 block text-4xl font-bold text-black lg:text-5xl">Your Name</span>
+                    </h1>
+                    <!-- Typing Text Placeholder -->
+                    <p id="typing-text" class="mb-5 font-semibold leading-relaxed text-secondary"></p>
+                    <!-- Button to About Section -->
+                    <div class="flex justify-start items-start">
+                        <a href="tentang-saya.html" class="px-4 py-3 text-white bg-[#614a93] hover:bg-[#3a2c58] rounded-md outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform flex font-medium">
+                            <span>Tentang Saya</span>
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h6m0 0l-3-3m3 3l-3 3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <!-- Placeholder for Image -->
+                    <div class="relative mt-8 lg:right-0 lg:mt-9">
+                        <img src="https://res.cloudinary.com/dnmkw2715/image/upload/v1692605115/zionexeonch/Tanpa_judul_800_800_piksel_pwp0dy.png" alt="Your Image" class="relative z-10 mx-auto md:max-w-md max-w-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <div class="container">
+            <div class="flex items-center justify-center">
+                <h1 class="mb-3 text-center text-3xl font-bold tracking-tight leading-none text-gray-900 md:text-4xl">Hasil Kerja Saya</h1>
+            </div>
+            <p class="mb-4 px-4 md:px-0 text-center md:text-xl text-sm font-bold tracking-tight leading-none text-gray-900 md:text-1xl">
+                Berikut beberapa hasil kerja yang sudah pernah saya kerjakan berikut ini:
+            </p>
+            <div class="relative p-2 overflow-auto">
+                <div class="relative mb-4 w-full pb-2 flex gap-3 snap-x snap-mandatory overflow-x-auto scrollbar">
+                    <!-- Portfolio Item -->
+                    <div class="snap-start snap-always shrink-0">
+                        <div class="rounded shadow-md">
+                            <div class="relative">
+                                <span class="absolute inset-0 z-10 bg-black text-white text-center flex flex-col items-center justify-center opacity-0 hover:opacity-100 bg-opacity-90 duration-300">
+                                    <h1 class="text-xs lg:text-xl tracking-wider font-bold">Project Title</h1>
+                                </span>
+                                <div class="w-full flex flex-wrap content-center">
+                                    <img src="path/to/your/image.png" class="bg-none object-cover max-w-full h-64" alt="Project Title" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for more items -->
+                </div>
+                <!-- Button to View More Work -->
+                <div class="flex justify-start items-start mb-4">
+                    <a href="produk-saya.html" class="px-4 py-3 text-white bg-[#614a93] hover:bg-[#3a2c58] rounded-md outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform flex font-medium">
+                        <span>Hasil Kerja Lainnya</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h6m0 0l-3-3m3 3l-3 3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 border-gray-200 font-poppins">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between md:items-center md:mx-14">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="flex items-center justify-center md:justify-normal">
+                        <img src="path/to/your/logo.png" class="h-32 sm:h-52 w-auto mr-3" alt="Your Logo" />
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 gap-4 font-poppins">
+                    <div>
+                        <h2 class="mb-5 text-sm font-bold text-[#5c3d1d] uppercase">Lainnya</h2>
+                        <ul class="text-[#5c3d1d] font-bold">
+                            <li>
+                                <a href="kontak-saya.html" class="hover:underline">Hubungi Saya</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-[#3d2829] sm:mx-auto lg:my-8" />
+            <div class="flex items-center justify-center">
+                <span class="text-1xl text-center text-[#5c3d1d] font-bold">
+                    © 2025 <a href="index.html" class="hover:underline">Your Name</a>. Created with ❤️.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Include Flowbite JS for components -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

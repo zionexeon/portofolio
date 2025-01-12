@@ -1,0 +1,16 @@
+/* Custom styles if needed */
+.scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.typing {
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+}
